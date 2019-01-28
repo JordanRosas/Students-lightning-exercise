@@ -1,5 +1,5 @@
 import React, { Component }  from 'react'
-
+import { Link } from 'react-router-dom'
 export default class StudentList extends Component{
   render(){
     return(
@@ -10,6 +10,8 @@ export default class StudentList extends Component{
             <h2>
               {student.firstName} {student.lastName}
             </h2>
+
+            <Link className="nav-link" to={`/students/${student.id}/edit`}>Edit</Link>
           </div>
         )
       }
